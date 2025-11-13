@@ -3,8 +3,15 @@
 import { useEffect, useState } from 'react'
 import { ArrowRight, Sparkles } from 'lucide-react'
 
+interface Particle {
+  left: number
+  top: number
+  delay: number
+}
+
 export function HeroSection() {
   const [eventDays, setEventDays] = useState({ days: 0, hours: 0 })
+  const [particles, setParticles] = useState<Particle[]>([])
 
   useEffect(() => {
     const calculateCountdown = () => {
@@ -25,27 +32,26 @@ export function HeroSection() {
     return () => clearInterval(timer)
   }, [])
 
+  useEffect(() => {
+    const generatedParticles = [...Array(20)].map(() => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      delay: Math.random() * 3,
+    }))
+    setParticles(generatedParticles)
+  }, [])
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: 'url(/placeholder.svg?height=1080&width=1920&query=luxury-balloons-event-decoration)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-
       {/* Animated Particles */}
-      {[...Array(20)].map((_, i) => (
+      {particles.map((particle, i) => (
         <div
           key={i}
           className="absolute w-1 h-1 bg-red-600 rounded-full animate-float"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 3}s`,
+            left: `${particle.left}%`,
+            top: `${particle.top}%`,
+            animationDelay: `${particle.delay}s`,
           }}
         />
       ))}
