@@ -87,27 +87,27 @@ export function HeroSection() {
           </div>
 
           {/* Trust Banner */}
-          <div className="grid grid-cols-3 gap-4 bg-white/5 backdrop-blur p-8 rounded-xl border border-white/10 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 bg-white/5 backdrop-blur p-4 sm:p-6 md:p-8 rounded-xl border border-white/10 max-w-2xl mx-auto w-full">
             <div className="text-center">
-              <p className="text-3xl font-bold text-red-600">500+</p>
-              <p className="text-gray-300 text-sm">Happy Clients</p>
+              <p className="text-2xl sm:text-3xl font-bold text-red-600">500+</p>
+              <p className="text-gray-300 text-xs sm:text-sm">Happy Clients</p>
+            </div>
+            <div className="text-center col-span-1 sm:col-span-1">
+              <p className="text-xl sm:text-3xl font-bold text-blue-600 leading-tight">Same-Day</p>
+              <p className="text-gray-300 text-xs sm:text-sm">Setup Available</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold text-blue-600">Same-Day</p>
-              <p className="text-gray-300 text-sm">Setup Available</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-red-600">#1</p>
-              <p className="text-gray-300 text-sm">Detroit Luxury Décor</p>
+              <p className="text-2xl sm:text-3xl font-bold text-red-600">#1</p>
+              <p className="text-gray-300 text-xs sm:text-sm">Detroit Luxury Décor</p>
             </div>
           </div>
 
           {/* Sweetest Day Banner */}
-          <div className="mt-12 bg-gradient-to-r from-red-600/20 to-blue-600/20 border border-red-600/50 rounded-xl p-6 max-w-2xl mx-auto">
-            <p className="text-white font-semibold mb-3">🎉 Sweetest Day Special – 10/18/2025</p>
-            <div className="text-gray-200 text-sm">
-              <span className="text-red-600 font-bold text-lg">{eventDays.days}</span> days and{' '}
-              <span className="text-blue-600 font-bold text-lg">{eventDays.hours}</span> hours until the ultimate gift-giving season!
+          <div className="mt-8 sm:mt-12 bg-gradient-to-r from-red-600/20 to-blue-600/20 border border-red-600/50 rounded-xl p-4 sm:p-6 max-w-2xl mx-auto w-full">
+            <p className="text-white font-semibold mb-2 sm:mb-3 text-sm sm:text-base">🎉 Sweetest Day Special – 10/18/2025</p>
+            <div className="text-gray-200 text-xs sm:text-sm">
+              <span className="text-red-600 font-bold text-base sm:text-lg">{eventDays.days}</span> days and{' '}
+              <span className="text-blue-600 font-bold text-base sm:text-lg">{eventDays.hours}</span> hours until the ultimate gift-giving season!
             </div>
             <p className="text-yellow-300 text-xs mt-2 font-semibold">Early booking discount: Book by 9/30 for 15% off!</p>
           </div>
