@@ -65,11 +65,11 @@ export function ServicesGrid() {
           {services.map((service, idx) => (
             <div
               key={service.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-in"
+              className="group bg-white/10 backdrop-blur border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-in"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               {/* Image */}
-              <div className="relative h-56 overflow-hidden bg-gray-200">
+              <div className="relative h-56 overflow-hidden bg-gray-700">
                 <img
                   src={service.image || "/placeholder.svg"}
                   alt={service.title}
@@ -80,9 +80,9 @@ export function ServicesGrid() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <button className="w-full py-2 bg-gradient-to-r from-red-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all transform hover:scale-105">
+                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <button className="w-full py-3 bg-gradient-to-r from-red-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all transform hover:scale-105 animate-pulse-glow">
                   Learn More
                 </button>
               </div>
