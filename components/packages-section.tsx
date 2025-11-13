@@ -92,7 +92,7 @@ export function PackagesSection() {
               {/* Background */}
               <div className="h-full flex flex-col">
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden bg-gray-200">
+                <div className="relative h-48 overflow-hidden bg-gray-700">
                   <img
                     src={pkg.image || "/placeholder.svg"}
                     alt={pkg.name}
@@ -102,27 +102,27 @@ export function PackagesSection() {
 
                 {/* Content */}
                 <div className="flex-1 p-6 flex flex-col">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                  <p className="text-gray-600 mb-6">{pkg.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
+                  <p className="text-gray-300 mb-6">{pkg.description}</p>
 
                   {/* Price */}
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-red-600">${pkg.price}</span>
-                    <span className="text-gray-600 ml-2">one-time</span>
+                    <span className="text-4xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">${pkg.price}</span>
+                    <span className="text-gray-400 ml-2">one-time</span>
                   </div>
 
                   {/* Features */}
                   <ul className="space-y-3 mb-8 flex-1">
                     {pkg.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <Check size={20} className="text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <Check size={20} className="text-green-400 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Button */}
-                  <button className="w-full bg-gradient-to-r from-red-600 to-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all transform hover:scale-105">
+                  <button className="w-full bg-gradient-to-r from-red-600 to-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all transform hover:scale-105 animate-pulse-glow">
                     <ShoppingCart size={20} />
                     Add to Cart
                   </button>
