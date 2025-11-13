@@ -77,7 +77,7 @@ export function PackagesSection() {
               key={pkg.id}
               className={`relative rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 animate-slide-in ${
                 pkg.badge === 'Most Popular'
-                  ? 'border-4 border-red-600 shadow-2xl md:scale-105'
+                  ? 'border-4 border-red-600 shadow-2xl lg:scale-105'
                   : 'border border-gray-200 shadow-lg'
               }`}
               style={{ animationDelay: `${idx * 0.1}s` }}
