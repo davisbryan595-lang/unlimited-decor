@@ -39,13 +39,13 @@ export function BookingForm() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+    <section className="py-12 sm:py-20 bg-gradient-to-br from-gray-900 to-black text-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 animate-slide-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-8 sm:mb-12 animate-slide-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Ready to Book Your Event?
           </h2>
-          <p className="text-xl text-gray-300 mb-4">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-4 px-2">
             Fill out the form below and we'll be in touch within 1 hour!
           </p>
           <div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-600 rounded-full px-4 py-2">
