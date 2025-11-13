@@ -53,7 +53,7 @@ const packages = [
 
 export function PackagesSection() {
   return (
-    <section id="packages" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="packages" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 animate-slide-in">
