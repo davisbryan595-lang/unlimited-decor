@@ -53,7 +53,7 @@ const packages = [
 
 export function PackagesSection() {
   return (
-    <section id="packages" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="packages" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 animate-slide-in">
@@ -62,10 +62,10 @@ export function PackagesSection() {
               <Sparkles size={16} /> Packages
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Ready-to-Book Packages
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 px-2">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 px-2">
             Choose the perfect package for your special moment
           </p>
         </div>
@@ -77,22 +77,22 @@ export function PackagesSection() {
               key={pkg.id}
               className={`relative rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 animate-slide-in ${
                 pkg.badge === 'Most Popular'
-                  ? 'border-4 border-red-600 shadow-2xl lg:scale-105'
-                  : 'border border-gray-200 shadow-lg'
+                  ? 'border-4 border-gradient-to-r border-red-600 shadow-2xl lg:scale-105 bg-white/10 backdrop-blur'
+                  : 'border border-white/20 shadow-lg bg-white/10 backdrop-blur'
               }`}
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               {/* Badge */}
               {pkg.badge && (
-                <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                <div className="absolute top-4 right-4 bg-gradient-to-r from-red-600 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
                   {pkg.badge}
                 </div>
               )}
 
               {/* Background */}
-              <div className="bg-white h-full flex flex-col">
+              <div className="h-full flex flex-col">
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden bg-gray-200">
+                <div className="relative h-48 overflow-hidden bg-gray-700">
                   <img
                     src={pkg.image || "/placeholder.svg"}
                     alt={pkg.name}
@@ -102,27 +102,27 @@ export function PackagesSection() {
 
                 {/* Content */}
                 <div className="flex-1 p-6 flex flex-col">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                  <p className="text-gray-600 mb-6">{pkg.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
+                  <p className="text-gray-300 mb-6">{pkg.description}</p>
 
                   {/* Price */}
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-red-600">${pkg.price}</span>
-                    <span className="text-gray-600 ml-2">one-time</span>
+                    <span className="text-4xl font-bold bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">${pkg.price}</span>
+                    <span className="text-gray-400 ml-2">one-time</span>
                   </div>
 
                   {/* Features */}
                   <ul className="space-y-3 mb-8 flex-1">
                     {pkg.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <Check size={20} className="text-green-600 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                        <Check size={20} className="text-green-400 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Button */}
-                  <button className="w-full bg-gradient-to-r from-red-600 to-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all transform hover:scale-105">
+                  <button className="w-full bg-gradient-to-r from-red-600 to-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:shadow-lg transition-all transform hover:scale-105 animate-pulse-glow">
                     <ShoppingCart size={20} />
                     Add to Cart
                   </button>
