@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-black text-white py-12 border-t-4 border-red-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4">
               <span className="text-red-600">✨ Unlimited</span>
