@@ -142,7 +142,7 @@ export function BookingForm() {
               name="budget"
               value={formData.budget}
               onChange={handleChange}
-              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors"
+              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-base"
             >
               <option value="">Select Budget Range</option>
               <option value="under-200">Under $200</option>
@@ -151,14 +151,14 @@ export function BookingForm() {
               <option value="1000+">$1,000+</option>
             </select>
             <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-4">
-              <MessageSquare size={18} className="text-red-600" />
+              <MessageSquare size={18} className="text-red-600 flex-shrink-0" />
               <input
                 type="text"
                 name="message"
                 placeholder="Special Requests?"
                 value={formData.message}
                 onChange={handleChange}
-                className="flex-1 bg-transparent py-3 text-white placeholder-gray-400 focus:outline-none"
+                className="flex-1 bg-transparent py-3 text-white placeholder-gray-400 focus:outline-none text-base"
               />
             </div>
           </div>
