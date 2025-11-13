@@ -60,7 +60,7 @@ export function GallerySection() {
           {filteredImages.map((image, idx) => (
             <div
               key={image.id}
-              className="group cursor-pointer overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-in"
+              className="group cursor-pointer overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-slide-in border border-white/20"
               onClick={() => setSelectedImage(image.id)}
               style={{ animationDelay: `${idx * 0.05}s` }}
             >
@@ -69,7 +69,7 @@ export function GallerySection() {
                 alt="Gallery"
                 className="w-full h-64 object-cover group-hover:brightness-110 transition-all"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
                 <span className="text-white font-semibold">View</span>
               </div>
             </div>
