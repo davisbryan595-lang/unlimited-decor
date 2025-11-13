@@ -56,28 +56,28 @@ export function PackagesSection() {
     <section id="packages" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 animate-slide-in">
-          <div className="inline-block bg-red-100 rounded-full px-4 py-2 mb-4">
-            <span className="text-red-600 font-semibold flex items-center gap-2 justify-center">
+        <div className="text-center mb-12 sm:mb-16 animate-slide-in">
+          <div className="inline-block bg-red-100 rounded-full px-3 sm:px-4 py-2 mb-4">
+            <span className="text-red-600 font-semibold flex items-center gap-2 justify-center text-sm sm:text-base">
               <Sparkles size={16} /> Packages
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Ready-to-Book Packages
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 px-2">
             Choose the perfect package for your special moment
           </p>
         </div>
 
         {/* Packages Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
           {packages.map((pkg, idx) => (
             <div
               key={pkg.id}
               className={`relative rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 animate-slide-in ${
                 pkg.badge === 'Most Popular'
-                  ? 'border-4 border-red-600 shadow-2xl md:scale-105'
+                  ? 'border-4 border-red-600 shadow-2xl lg:scale-105'
                   : 'border border-gray-200 shadow-lg'
               }`}
               style={{ animationDelay: `${idx * 0.1}s` }}

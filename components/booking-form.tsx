@@ -39,13 +39,13 @@ export function BookingForm() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+    <section className="py-12 sm:py-20 bg-gradient-to-br from-gray-900 to-black text-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 animate-slide-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-8 sm:mb-12 animate-slide-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Ready to Book Your Event?
           </h2>
-          <p className="text-xl text-gray-300 mb-4">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-4 px-2">
             Fill out the form below and we'll be in touch within 1 hour!
           </p>
           <div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-600 rounded-full px-4 py-2">
@@ -56,9 +56,9 @@ export function BookingForm() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-8 space-y-6">
+        <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6">
           {/* Name Fields */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <input
               type="text"
               name="firstName"
@@ -66,7 +66,7 @@ export function BookingForm() {
               value={formData.firstName}
               onChange={handleChange}
               required
-              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-red-600 transition-colors"
+              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-red-600 transition-colors text-base"
             />
             <input
               type="text"
@@ -75,14 +75,14 @@ export function BookingForm() {
               value={formData.lastName}
               onChange={handleChange}
               required
-              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-red-600 transition-colors"
+              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-red-600 transition-colors text-base"
             />
           </div>
 
           {/* Contact Fields */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-4">
-              <Mail size={18} className="text-red-600" />
+              <Mail size={18} className="text-red-600 flex-shrink-0" />
               <input
                 type="email"
                 name="email"
@@ -90,11 +90,11 @@ export function BookingForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="flex-1 bg-transparent py-3 text-white placeholder-gray-400 focus:outline-none"
+                className="flex-1 bg-transparent py-3 text-white placeholder-gray-400 focus:outline-none text-base"
               />
             </div>
             <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-4">
-              <Phone size={18} className="text-red-600" />
+              <Phone size={18} className="text-red-600 flex-shrink-0" />
               <input
                 type="tel"
                 name="phone"
@@ -102,28 +102,28 @@ export function BookingForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="flex-1 bg-transparent py-3 text-white placeholder-gray-400 focus:outline-none"
+                className="flex-1 bg-transparent py-3 text-white placeholder-gray-400 focus:outline-none text-base"
               />
             </div>
           </div>
 
           {/* Event Details */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-4">
-              <Calendar size={18} className="text-red-600" />
+              <Calendar size={18} className="text-red-600 flex-shrink-0" />
               <input
                 type="date"
                 name="eventDate"
                 value={formData.eventDate}
                 onChange={handleChange}
-                className="flex-1 bg-transparent py-3 text-white focus:outline-none"
+                className="flex-1 bg-transparent py-3 text-white focus:outline-none text-base"
               />
             </div>
             <select
               name="occasion"
               value={formData.occasion}
               onChange={handleChange}
-              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors"
+              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-base"
             >
               <option value="">Select Occasion *</option>
               <option value="birthday">Birthday</option>
@@ -137,12 +137,12 @@ export function BookingForm() {
           </div>
 
           {/* Budget and Message */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <select
               name="budget"
               value={formData.budget}
               onChange={handleChange}
-              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors"
+              className="bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-red-600 transition-colors text-base"
             >
               <option value="">Select Budget Range</option>
               <option value="under-200">Under $200</option>
@@ -151,14 +151,14 @@ export function BookingForm() {
               <option value="1000+">$1,000+</option>
             </select>
             <div className="flex items-center gap-2 bg-white/10 border border-white/20 rounded-lg px-4">
-              <MessageSquare size={18} className="text-red-600" />
+              <MessageSquare size={18} className="text-red-600 flex-shrink-0" />
               <input
                 type="text"
                 name="message"
                 placeholder="Special Requests?"
                 value={formData.message}
                 onChange={handleChange}
-                className="flex-1 bg-transparent py-3 text-white placeholder-gray-400 focus:outline-none"
+                className="flex-1 bg-transparent py-3 text-white placeholder-gray-400 focus:outline-none text-base"
               />
             </div>
           </div>

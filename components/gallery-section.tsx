@@ -27,24 +27,24 @@ export function GallerySection() {
     <section id="gallery" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 animate-slide-in">
-          <div className="inline-block bg-red-100 rounded-full px-4 py-2 mb-4">
-            <span className="text-red-600 font-semibold flex items-center gap-2 justify-center">
+        <div className="text-center mb-8 sm:mb-12 animate-slide-in">
+          <div className="inline-block bg-red-100 rounded-full px-3 sm:px-4 py-2 mb-4">
+            <span className="text-red-600 font-semibold flex items-center gap-2 justify-center text-sm sm:text-base">
               <Sparkles size={16} /> Our Gallery
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Moments We've Created
           </h2>
         </div>
 
         {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-in">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 animate-slide-in px-2">
           {['all', 'birthdays', 'sweetest-day', 'anniversaries', 'proposals'].map(filter => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 rounded-full font-semibold transition-all capitalize ${
+              className={`px-3 sm:px-6 py-2 text-sm sm:text-base rounded-full font-semibold transition-all capitalize ${
                 activeFilter === filter
                   ? 'bg-red-600 text-white scale-105'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -56,7 +56,7 @@ export function GallerySection() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-max">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 auto-rows-max">
           {filteredImages.map((image, idx) => (
             <div
               key={image.id}
