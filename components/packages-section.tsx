@@ -56,16 +56,16 @@ export function PackagesSection() {
     <section id="packages" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 animate-slide-in">
-          <div className="inline-block bg-red-100 rounded-full px-4 py-2 mb-4">
-            <span className="text-red-600 font-semibold flex items-center gap-2 justify-center">
+        <div className="text-center mb-12 sm:mb-16 animate-slide-in">
+          <div className="inline-block bg-red-100 rounded-full px-3 sm:px-4 py-2 mb-4">
+            <span className="text-red-600 font-semibold flex items-center gap-2 justify-center text-sm sm:text-base">
               <Sparkles size={16} /> Packages
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Ready-to-Book Packages
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 px-2">
             Choose the perfect package for your special moment
           </p>
         </div>
