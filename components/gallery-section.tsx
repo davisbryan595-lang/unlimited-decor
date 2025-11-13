@@ -33,7 +33,7 @@ export function GallerySection() {
               <Sparkles size={16} /> Our Gallery
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Moments We've Created
           </h2>
         </div>
