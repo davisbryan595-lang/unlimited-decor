@@ -3,8 +3,15 @@
 import { useEffect, useState } from 'react'
 import { ArrowRight, Sparkles } from 'lucide-react'
 
+interface Particle {
+  left: number
+  top: number
+  delay: number
+}
+
 export function HeroSection() {
   const [eventDays, setEventDays] = useState({ days: 0, hours: 0 })
+  const [particles, setParticles] = useState<Particle[]>([])
 
   useEffect(() => {
     const calculateCountdown = () => {
@@ -23,6 +30,15 @@ export function HeroSection() {
     calculateCountdown()
     const timer = setInterval(calculateCountdown, 1000)
     return () => clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    const generatedParticles = [...Array(20)].map(() => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      delay: Math.random() * 3,
+    }))
+    setParticles(generatedParticles)
   }, [])
 
   return (
