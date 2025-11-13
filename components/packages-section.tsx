@@ -77,20 +77,20 @@ export function PackagesSection() {
               key={pkg.id}
               className={`relative rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 animate-slide-in ${
                 pkg.badge === 'Most Popular'
-                  ? 'border-4 border-red-600 shadow-2xl lg:scale-105'
-                  : 'border border-gray-200 shadow-lg'
+                  ? 'border-4 border-gradient-to-r border-red-600 shadow-2xl lg:scale-105 bg-white/10 backdrop-blur'
+                  : 'border border-white/20 shadow-lg bg-white/10 backdrop-blur'
               }`}
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
               {/* Badge */}
               {pkg.badge && (
-                <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                <div className="absolute top-4 right-4 bg-gradient-to-r from-red-600 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
                   {pkg.badge}
                 </div>
               )}
 
               {/* Background */}
-              <div className="bg-white h-full flex flex-col">
+              <div className="h-full flex flex-col">
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden bg-gray-200">
                   <img
