@@ -46,8 +46,8 @@ export function GallerySection() {
               onClick={() => setActiveFilter(filter)}
               className={`px-3 sm:px-6 py-2 text-sm sm:text-base rounded-full font-semibold transition-all capitalize ${
                 activeFilter === filter
-                  ? 'bg-red-600 text-white scale-105'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  ? 'bg-gradient-to-r from-red-600 to-blue-600 text-white scale-105'
+                  : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
               }`}
             >
               {filter === 'sweetest-day' ? 'Sweetest Day' : filter}
