@@ -23,10 +23,11 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="text-2xl font-bold">
-              <span className="text-red-600">✨ Unlimited</span>
-              <span className="text-white ml-1">Decor</span>
+          <Link href="/" className="flex items-center gap-1 sm:gap-2 group">
+            <div className="text-lg sm:text-2xl font-bold whitespace-nowrap">
+              <span className="text-red-600">✨</span>
+              <span className="text-red-600 ml-0.5 sm:ml-0">Unlimited</span>
+              <span className="text-white ml-0.5 sm:ml-1">Decor</span>
             </div>
           </Link>
 
