@@ -27,16 +27,6 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: 'url(/placeholder.svg?height=1080&width=1920&query=luxury-balloons-event-decoration)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-
       {/* Animated Particles */}
       {[...Array(20)].map((_, i) => (
         <div
